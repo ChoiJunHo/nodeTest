@@ -211,6 +211,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JunhoChoi\WebstormProjects\dream02" />
       <recent name="C:\Users\JunhoChoi\WebstormProjects\dream02\views" />
       <recent name="C:\Users\JunhoChoi\WebstormProjects\dream02\public\lib" />
     </key>
@@ -486,6 +487,14 @@
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
