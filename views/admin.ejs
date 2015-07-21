@@ -24,49 +24,48 @@
 </head>
 <body>
 <div class = "container">
-<form class="form-horizontal">
-    <div class="form-group">
-        <label for="recipe" class="col-sm-2 control-label">요리 이름</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="recipe" placeholder="요리 이름">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="recipe" class="col-sm-2 control-label">요리 이름</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="recipe" placeholder="요리 이름">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="ingredients" class="col-sm-2 control-label">재료</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="ingredients" placeholder="재료">
+        <div class="form-group">
+            <label for="ingredients" class="col-sm-2 control-label">재료</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ingredients" placeholder="재료">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label">사용할 재료들</label>
-        <div id="selectedIngredients" class="col-md-1 ingredients" style="display: -webkit-box;">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">사용할 재료들</label>
+            <div id="selectedIngredients" class="col-md-1 ingredients" style="display: -webkit-box;">
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <label for="note" class="col-sm-2 control-label">레시피</label>
-        <div class="col-sm-10">
-            <textarea id="note" class="form-control" rows="20"></textarea>
+        <div class="form-group">
+            <label for="note" class="col-sm-2 control-label">레시피</label>
+            <div class="col-sm-10">
+                <textarea id="note" class="form-control" rows="20"></textarea>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </div>
 <script type="text/javascript">
     $(function(){
         $('#ingredients').keypress(function(e){
             if(e.which == 13){
                 console.log('enter key is pressed.');
-                var re = /\s*,\s*/;
+//                var re = /\s*, \s*/;
+                var re = /[ ,]+/;
                 var ingredientStr = $('#ingredients').val();
                 var ingredients = ingredientStr.split(re);
                 $.each(ingredients, function(index, value){
                     var html = "<span class='label label-info'><span>"+value+"</span><a><i class='remove glyphicon glyphicon-remove-sign glyphicon-white'></i></a></span>";
                     $('#selectedIngredients').append(html);
                 });
+                $('#selectIngredients').val('');
             }
-        });
-        $('i.remove').on('click', function(){
-           console.log('remove is clicked');
         });
 
     });

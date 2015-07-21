@@ -15,12 +15,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/search', function(req, res, next){
     var sql = 'SELECT * FROM recipe';
-    if(req.query.ingredients){
-        var re = /\s*,\s*/;
-        var ingredients = req.query.ingredients;
-        var ingredient = ingredients.split(re);
-
-    }
+    //if(req.query.ingredients){
+    //    var re = /\s*,\s*/;
+    //    var ingredients = req.query.ingredients;
+    //    var ingredient = ingredients.split(re);
+    //
+    //}
     pool.getConnection(function(err, connection){
         connection.query(sql, function(err, rows, fields){
             if(err) {
